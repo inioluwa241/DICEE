@@ -80,4 +80,21 @@ resetBtn.addEventListener('click', function(){
  score2=0
  totalScore1.innerHTML=`${0}`
  totalScore2.innerHTML=`${0}`
+  rollScore1.innerHTML=`${0}`
+  rollScore2.innerHTML=`${0}`
+})
+
+document.querySelector("body").addEventListener("click", function(e){
+    const target=e.target
+    
+    if(target.nodeName !== 'Nav' && nav.style.display=="block" && target.nodeName!=='I'){
+        nav.style.display="none"
+        // console.log(target)
+        // console.log(target.nodeName)
+    }else{
+        if(target.nodeName=='I'){
+            nav.style.display="block"
+      }
+    }
+
 })
